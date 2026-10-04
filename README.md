@@ -1,6 +1,5 @@
 # Recession Traffic Light
 
-Project for the course Desarrollo de Aplicaciones para la Visualización de Datos (DAVD), 2026-2027.
 Author: Hugo Raggini Paternain
 
 ## Description
