@@ -1,53 +1,49 @@
-# Semáforo de Recesión
+# Recession Traffic Light
 
-Proyecto de la asignatura Desarrollo de Aplicaciones para la Visualización de Datos (DAVD), curso 2026-2027.
-Autor: Hugo Raggini Paternain
+Project for the course Desarrollo de Aplicaciones para la Visualización de Datos (DAVD), 2026-2027.
+Author: Hugo Raggini Paternain
 
-## Descripción
+## Description
 
-Aplicación web interactiva que estima la probabilidad de que la economía de EE.UU. entre en recesión en los próximos 12 meses. Usa datos públicos de FRED (Reserva Federal de St. Louis) y un modelo de regresión logística, y muestra el resultado como un semáforo verde, ámbar o rojo, junto con su evolución histórica y las variables que lo explican.
+Interactive web app that estimates the probability of a US recession in the next 12 months. It uses public data from FRED (Federal Reserve Bank of St. Louis) and a logistic regression model, and shows the result as a green, amber or red traffic light, along with its historical evolution and the variables that drive it.
 
-El objetivo es acercar este tipo de información, que hoy suele estar en plataformas de pago o en formatos técnicos, a cualquier persona.
+The goal is to make this kind of information, which today is mostly found in paid platforms or technical formats, accessible to anyone.
 
-## Objetivos
+## Objectives
 
-- Construir un pipeline que descargue y procese automáticamente los datos de FRED.
-- Entrenar un modelo explicable que estime la probabilidad de recesión a 12 meses.
-- Desarrollar un dashboard interactivo con Dash y Plotly.
-- Desplegar la aplicación en una URL pública.
+- Build a pipeline that automatically downloads and processes FRED data.
+- Train an explainable model that estimates the 12-month recession probability.
+- Develop an interactive dashboard with Dash and Plotly.
+- Deploy the app at a public URL.
 
-## Datos
+## Data
 
-Fuente: FRED (https://fred.stlouisfed.org)
+Source: FRED (https://fred.stlouisfed.org)
 
-| Serie | Descripción |
+| Series | Description |
 |---|---|
-| GS10, TB3MS | Bono a 10 años y letra a 3 meses (curva de tipos) |
-| UNRATE | Tasa de paro |
-| SAHMREALTIME | Regla de Sahm |
-| USREC | Indicador oficial de recesión (variable objetivo) |
+| GS10, TB3MS | 10-year Treasury and 3-month T-bill (yield curve) |
+| UNRATE | Unemployment rate |
+| SAHMREALTIME | Sahm rule indicator |
+| USREC | Official recession indicator (target variable) |
 
-## Estructura prevista
+## Planned structure
 
-    app.py              Aplicación Dash
-    src/etl.py          Descarga y procesamiento de datos
-    src/model.py        Modelo de predicción
-    src/graphics.py     Gráficos
+    app.py              Dash app
+    src/etl.py          Data download and processing
+    src/model.py        Prediction model
+    src/graphics.py     Charts
     requirements.txt
     Procfile
     render.yaml
 
-## Plan de trabajo
+## Work plan
 
-| Fechas | Tarea |
+| Dates | Task |
 |---|---|
-| 5 oct | Propuesta, repositorio y README |
-| 6 a 18 oct | Pipeline de datos y análisis exploratorio |
-| 19 oct a 1 nov | Modelo y validación |
-| 2 a 15 nov | Dashboard en Dash |
-| 16 a 22 nov | Despliegue en Render |
-| 23 a 26 nov | Ajustes finales y presentación |
-
-## Uso de IA
-
-Se ha utilizado Claude (Anthropic) como apoyo en la redacción de la propuesta, la definición del proyecto y la prueba inicial de datos.
+| Oct 5 | Proposal, repository and README |
+| Oct 6 to 18 | Data pipeline and exploratory analysis |
+| Oct 19 to Nov 1 | Model and validation |
+| Nov 2 to 15 | Dash dashboard |
+| Nov 16 to 22 | Deployment on Render |
+| Nov 23 to 26 | Final adjustments and presentation |
